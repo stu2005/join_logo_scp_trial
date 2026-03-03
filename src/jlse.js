@@ -94,7 +94,7 @@ const createAvs = (path, filename, index) => {
 //FFIndex("${filename}")
 //FFMpegSource2("${filename}", atrack=-1)`
 `TSFilePath="${filename}"
-LWLibavVideoSource(TSFilePath, repeat=true, dominance=1)
+LWLibavVideoSource(TSFilePath, repeat=false, dominance=1)
 AudioDub(last,LWLibavAudioSource(TSFilePath, stream_index=${index}, av_sync=true))
 `
   );
